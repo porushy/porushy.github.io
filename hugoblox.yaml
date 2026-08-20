@@ -1,5 +1,8 @@
 build:
-  hugo_version: '0.162.0'
+  # 0.162.0 cannot build this pinned theme module: `(dict)` with no
+  # args returns nil there, so build_links.html fails with "assignment to
+  # entry in nil map" on any page with `links:` front matter. Fixed in 0.163+.
+  hugo_version: '0.164.0'
 deploy:
   # Deployment target: github-pages, netlify, vercel, cloudflare, or none
   host: 'github-pages'
