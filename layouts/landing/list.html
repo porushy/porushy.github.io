@@ -1,0 +1,8 @@
+{{/* Override of the theme's `landing/list.html`.
+     See the comment in `layouts/home.html` — same Pagefind indexing fix,
+     applied to landing-type section pages such as /projects/. */}}
+{{- define "main" -}}
+<div data-pagefind-body>
+  {{ partial "landing_page.html" . }}
+</div>
+{{- end -}}

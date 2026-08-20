@@ -2,115 +2,174 @@ schema: hugoblox/author/v1
 slug: me
 is_owner: true
 name:
-  display: Dr. Alex Johnson
-  given: Alex
-  family: Johnson
-  alternate: ''  # Example: 王伟
-  pronunciation: ''  # Example: Wáng Wěi
-  pronouns: he/him
-postnominals:
-  - PhD
-  - MIEEE
+  display: Porush Yadav
+  given: Porush
+  family: Yadav
+  alternate: ''
+  pronunciation: ''
+  pronouns: ''
 status:
   icon: "☕️"
-role: Senior AI Research Scientist
+role: 
 bio: |
-  Alex Johnson is a Senior AI Research Scientist at Meta AI. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Alex is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  Hi! I am Porush Yadav. I have graduated from IIT Kanpur with a BS-MS Dual Degree in Mathematics 
+  and Scientific Computing. I have Worked at Axis Bank on an image recognition system that leverages 
+  neural networks to automate document classification and enhance data extraction. 
+  Before that, I interned at Samsung R&D Institute India, eJET systems, and EZ Technologies, 
+  where I worked on machine learning applications in signal data compression, recommendation 
+  systems, classification systems, and image recognition. 
 
-affiliations:
-  - name: Meta AI
-    url: https://ai.meta.com/
-
+  I look forward to leveraging AI and ML expertise to develop impactful
+  solutions that can solve real-life problems.
 links:
   - icon: at-symbol
-    url: mailto:alex.johnson@example.com
+    url: mailto:porush.yadav@gmail.com
     label: E-mail Me
-  - icon: brands/x
-    url: https://x.com/example
   - icon: brands/github
-    url: https://github.com/example
+    url: https://github.com/porushy
   - icon: brands/linkedin
-    url: https://www.linkedin.com/in/example/
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=example
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://www.linkedin.com/in/porushyadav/
 
-interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+# NOTE: Interests are now edited in the "Interests" block of content/_index.md.
+# The homepage hero (`resume-biography`) does not render this field.
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: MS in Mathematics and Scientific Computing
+    institution: Indian Institute of Technology Kanpur
+    year: '2016 – 2021'
+    start: 2016-07-01
+    end: 2021-06-30
     summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+      CPI: 9.8/10. Part of the BS-MS dual degree programme. MS project on
+      European option pricing under the Black-Scholes framework.
+  - degree: BS in Mathematics and Scientific Computing
+    institution: Indian Institute of Technology Kanpur
+    year: '2016 – 2021'
+    start: 2016-07-01
+    end: 2021-06-30
+    summary: |
+      CPI: 7.8/10.
+  - degree: Class XII, CBSE
+    institution: Central Board of Secondary Education
+    year: '2016'
+    end: 2016-05-31
+    summary: |
+      86.6%
+  - degree: Class X, CBSE
+    institution: Central Board of Secondary Education
+    year: '2014'
+    end: 2014-05-31
+    summary: |
+      CGPA: 9.8/10
 
 experience:
-  - role: Senior AI Research Scientist
-    org: Meta AI
-    start: 2020-01-01
+  - role: Image Recognition — Machine Learning
+    org: Axis Bank Limited
+    start: 2021-08-01
+    end: 2021-11-30
     summary: |
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models.
-    button:
-      text: View portfolio
-      url: /
-      icon: hero/arrow-down-tray
-  - role: AI Research Intern
-    org: OpenAI
-    start: 2019-06-01
-    end: 2019-12-31
+      - Managed an image-recognition system using neural networks to automate document classification and data extraction.
+      - Evaluated system performance on diverse bank documents to identify and troubleshoot technical anomalies.
+      - Collaborated with cross-functional teams to enhance data extraction processes, improving operational efficiency.
+    tags:
+      - Convolutional Neural Networks
+      - Image Recognition
+  - role: Intern
+    org: Samsung R&D Institute India
+    start: 2020-05-01
+    end: 2020-07-31
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      - Conducted in-depth studies on various IQ data compression techniques to minimise EVM values in uplink and downlink.
+      - Explored advanced methods including LPC-based fronthaul compression, vector quantization, bit vector compression, IQ bit width reduction, linear prediction coding, and block floating point compression.
+      - Evaluated compression techniques using mathematical models and the input data properties of IQ data to ensure optimal performance.
+    tags:
+      - Signal Processing
+      - Data Compression
+      - Vector Quantization
+  - role: Machine Learning Intern
+    org: eJET Systems
+    start: 2019-05-01
+    end: 2019-07-31
+    summary: |
+      - Built a food entity recognition model to identify food items in a sentence, along with quantity, attribute, and toppings using NLTK.
+      - Built a food recommendation model using word embeddings, and devised an algorithm to recommend food with respect to multiple food items.
+      - Built a classifier model to classify user input into pre-defined intents using GRU layers and word embeddings in Keras.
+    tags:
+      - Natural Language Processing
+      - Recommender Systems
+      - Classification
+  - role: Intern
+    org: EZ Technologies
+    start: 2018-12-01
+    end: 2019-01-31
+    summary: |
+      - Developed a face recognition model using OpenCV and Python to streamline classroom attendance.
+      - Implemented a pre-trained deep neural network for detecting multiple student faces in real time.
+      - Created 128-dimensional face embeddings with a Siamese network to enhance model accuracy.
+      - Used MongoDB for efficient record management, including attendance tracking and data manipulation.
+    tags:
+      - OpenCV
+      - Deep Neural Networks
+      - MongoDB
 
 skills:
-  - name: Technical Skills
+  - name: Machine Learning & AI
+    items:
+      - label: Supervised & Unsupervised Learning
+      - label: Deep Neural Networks
+      - label: Convolutional Neural Networks
+      - label: Natural Language Processing
+      - label: Recommender Systems
+      - label: Model Explainability (SHAP)
+  - name: Quantitative & Statistical
+    items:
+      - label: Quantitative Finance
+      - label: Option Pricing & Derivatives
+      - label: Time Series & Stochastic Processes
+      - label: Bayesian Inference & MCMC
+      - label: Anomaly Detection
+      - label: Signal Processing & Data Compression
+  - name: Tools & Technologies
     items:
       - label: Python
-        level: 5
-      - label: Machine Learning
-        level: 5
-      - label: Cloud Computing
-        level: 4
-  - name: Research & Communication
-    items:
-      - label: Academic Writing
-        level: 5
-      - label: Conference Presentations
-        level: 4
-      - label: Grant Proposals
-        level: 4
-
-languages:
-  - name: English
-    level: 5
-    label: Native
-  - name: Spanish
-    level: 4
-    label: Fluent
+      - label: R
+      - label: MATLAB
+      - label: Keras / TensorFlow / Scikit-learn
+      - label: OpenCV
+      - label: MongoDB
 
 awards:
-  - title: Best Paper Award
-    awarder: NeurIPS
-    date: "2022-12-01"
-    summary: Awarded for groundbreaking work on efficient training of large models.
-    icon: hero/trophy
+  - title: Machine Learning Specialization
+    awarder: DeepLearning.AI
+    date: "2026-08-01"
+    icon: hero/academic-cap
+    summary: |
+      Credential ID `431bfef3-6465-4923-9e90-841c64b35522`
+
+      Reinforcement Learning · Deep Neural Networks · Unsupervised Learning · Supervised Learning
+  - title: AI Code Review
+    awarder: DeepLearning.AI
+    date: "2026-08-02"
+    icon: hero/academic-cap
+    summary: |
+      Credential ID `d3ba62f8-85ad-46ed-b825-802ff4ad96ee`
+
+      AI Agents · Retrieval-Augmented Generation (RAG) · Software Development
+  - title: Software Processes and Agile Practices
+    awarder: Coursera
+    date: "2021-09-03"
+    icon: hero/academic-cap
+    summary: |
+      Credential ID `ABELYZ54LNE4`
+  - title: Applying Machine Learning to your Data with GCP
+    awarder: Coursera
+    date: "2021-09-02"
+    icon: hero/academic-cap
+    summary: |
+      Credential ID `XUBXVHX6QRXJ`
+  - title: Smart Analytics, Machine Learning, and AI on GCP
+    awarder: Coursera
+    date: "2021-09-01"
+    icon: hero/academic-cap
+    summary: |
+      Credential ID `8ML67QDYKZ5J`

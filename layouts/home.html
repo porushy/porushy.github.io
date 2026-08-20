@@ -1,0 +1,16 @@
+{{/* Override of the theme's `home.html`.
+
+     Identical to the theme version, except the landing page is wrapped in
+     `data-pagefind-body`.
+
+     Why: Pagefind indexes ONLY pages carrying `data-pagefind-body` as soon as
+     ANY page on the site has that attribute. The theme sets it on `single.html`
+     (project/article pages) but not on landing pages, so this single-page site
+     had its entire homepage — bio, experience, skills, certifications —
+     excluded from search. See `pnpm run pagefind`.
+*/}}
+{{- define "main" -}}
+<div data-pagefind-body>
+  {{ partial "landing_page.html" . }}
+</div>
+{{- end -}}
