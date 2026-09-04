@@ -1,0 +1,17 @@
+{{/* Close the mobile nav drawer after tapping a menu item.
+
+     The theme's navbar is a pure-CSS drawer: `#nav-toggle` is a checkbox and
+     `input#nav-toggle:checked ~ #nav-menu` reveals the menu. Nothing unchecks
+     it, which is fine on a multi-page site (the next page loads with a fresh
+     checkbox) but broken here — every menu item is an in-page anchor, so on a
+     phone the drawer stays open on top of the section it just jumped to. */}}
+<script>
+  (function () {
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (!toggle || !menu) return;
+    menu.addEventListener('click', function (event) {
+      if (event.target.closest('a')) toggle.checked = false;
+    });
+  })();
+</script>

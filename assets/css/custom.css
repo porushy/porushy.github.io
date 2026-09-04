@@ -1,0 +1,114 @@
+/* ===========================================================================
+   Site overrides — loaded by the theme after its own stylesheet
+   (see `site_head.html`: `if fileExists "assets/css/custom.css"`).
+
+   Plain CSS only: this file is served as-is (minified), it does NOT go
+   through Tailwind, so `@apply` and Tailwind variants are unavailable here.
+   Tailwind class names are still valid *selectors* — escape the colon,
+   e.g. `.sm\:px-6`.
+   =========================================================================== */
+
+/* ---------------------------------------------------------------------------
+   MOBILE LAYOUT
+   Several theme blocks are built for a wide viewport and ship with no
+   horizontal gutter of their own — on a phone their text runs edge to edge.
+   Everything below is scoped to narrow screens; the desktop layout is
+   untouched.
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 767px) {
+  :root {
+    /* Single source of truth for the phone gutter. Matches the `px-6` the
+       theme already uses on its markdown and skills blocks. */
+    --site-mobile-gutter: 1.5rem;
+  }
+
+  /* --- Vertical rhythm ----------------------------------------------------
+     `layout.spacing: spacious` gives every section 6rem top and bottom, which
+     on a phone is most of a screenful of empty space between blocks. */
+  .hbb-section {
+    --hb-spacing-section: 3.25rem;
+  }
+
+  /* --- Biography / hero ---------------------------------------------------
+     `resume-biography` has zero horizontal padding at every level, so the bio
+     paragraph touches both edges of the screen. */
+  .resume-biography {
+    padding-left: var(--site-mobile-gutter);
+    padding-right: var(--site-mobile-gutter);
+  }
+
+  /* --- Projects and contact -----------------------------------------------
+     These blocks bring their own `px-4` (1rem); nudge it up so every section
+     on the page shares one left edge. The experience block is deliberately
+     left alone — its timeline rail already eats into the text column. */
+  .hbb-section .max-w-7xl.px-4 {
+    padding-left: var(--site-mobile-gutter);
+    padding-right: var(--site-mobile-gutter);
+  }
+
+  /* The contact card's `p-8` is a third of the screen width in padding. */
+  .hbb-section .max-w-7xl.px-4 .rounded-2xl.p-8 {
+    padding: 1.375rem;
+  }
+
+  /* --- Certifications (resume-awards) -------------------------------------
+     The card list is `w-full` inside an unpadded container, so the cards sit
+     flush against both screen edges. */
+  .hbb-section .w-full.flex.flex-col.gap-6 {
+    padding-left: var(--site-mobile-gutter);
+    padding-right: var(--site-mobile-gutter);
+  }
+
+  /* Card padding of 1.5rem is a big share of a 390px screen — reclaim some
+     of it for the text. Applies to the award and experience cards. */
+  .hbb-section .w-full.flex.flex-col.gap-6 > .p-6,
+  .hbb-section .group.relative > .rounded-xl.p-6 {
+    padding: 1.125rem;
+  }
+
+  /* --- Experience / education timeline ------------------------------------
+     `pl-12` reserves 3rem for the rail and marker before the card even
+     starts. Tighten the indent and the marker so the text column is wider. */
+  .hbb-section .group.relative.pl-12 {
+    padding-left: 2.5rem;
+  }
+
+  /* Keep the marker centred on the rail (`left-4`, i.e. 16px) after shrinking
+     it from 2rem to 1.75rem. */
+  .hbb-section .group.relative.pl-12 .w-8.h-8 {
+    width: 1.75rem;
+    height: 1.75rem;
+    left: 0.125rem;
+  }
+
+  /* --- Long unbreakable strings -------------------------------------------
+     Credential IDs and URLs are single tokens wider than the text column and
+     spill out of their card. */
+  .prose code,
+  .prose a {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   HEADER
+   Below `lg` the navbar holds brand + search + dark-mode toggle + theme-pack
+   picker + hamburger. On a phone that overflows and the hamburger wraps onto
+   a second row, doubling the height of the sticky header. The theme-pack
+   picker is the least useful of them on mobile, so it goes.
+   (To drop it on every screen size instead, set
+   `hugoblox.header.theme_picker: false` in `hugoblox.yaml`.)
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 1023px) {
+  #site-header .navbar div:has(> select) {
+    display: none;
+  }
+
+  /* Fallback for browsers without `:has()` — hides the control itself, the
+     wrapper's padding remains. */
+  #site-header .navbar select {
+    display: none;
+  }
+}
