@@ -79,6 +79,8 @@ sections:
           tag: '*'
         - name: Machine Learning
           tag: Machine Learning
+        - name: Generative AI
+          tag: Generative AI
         - name: Quantitative Finance
           tag: Quantitative Finance
         - name: NLP

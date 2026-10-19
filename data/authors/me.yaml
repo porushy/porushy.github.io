@@ -121,6 +121,13 @@ skills:
       - label: Natural Language Processing
       - label: Recommender Systems
       - label: Model Explainability (SHAP)
+      - label: Fairness & Bias Auditing
+  - name: Generative AI & LLMs
+    items:
+      - label: Retrieval-Augmented Generation (RAG)
+      - label: LLM Application Development
+      - label: Hybrid Search & Information Retrieval
+      - label: LLM / RAG Evaluation
   - name: Quantitative & Statistical
     items:
       - label: Quantitative Finance
@@ -129,12 +136,18 @@ skills:
       - label: Bayesian Inference & MCMC
       - label: Anomaly Detection
       - label: Signal Processing & Data Compression
+      - label: Credit Risk Modelling (PD / LGD / EAD, IFRS-9, Basel)
+      - label: Statistical Hypothesis Testing
   - name: Tools & Technologies
     items:
       - label: Python
       - label: R
       - label: MATLAB
       - label: Keras / TensorFlow / Scikit-learn
+      - label: LangChain / FAISS
+      - label: FastAPI
+      - label: Sentence-Transformers / Hugging Face
+      - label: Pandas / NumPy
       - label: OpenCV
       - label: MongoDB
 
