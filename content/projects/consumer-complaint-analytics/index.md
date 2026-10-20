@@ -15,10 +15,12 @@ tags:
   - Statistical Analysis
 ---
 
-Jun 2026 – Jul 2026
+Jul 2026
 
-- Engineered a full NLP pipeline on the CFPB Consumer Complaint Database (8+ GB) using TF-IDF and logistic regression.
-- Made an automated complaint classifier, which achieved ~0.87 accuracy.
-- Identified the growing share of templated filings and distinguished automated volume from genuine consumer harm using advanced statistical analysis, such as Cramér's V and the chi-square test of independence.
+Python · pandas · Dask · scikit-learn · Parquet · Streamlit
+
+- Engineered a memory-safe data pipeline using Dask and Parquet to stream and process the 8.8 GB (15.2M+ rows) CFPB database without exceeding RAM limits.
+- Trained an NLP text classifier using TF-IDF and Logistic Regression on 3.3M narratives, achieving 87.0% accuracy on a de-duplicated test set against a 60.6% naive baseline.
+- Applied chi-square tests and Cramér's V effect-size statistics to uncover a surge in templated "dispute-mill" filings (rising to 77%); deployed insights via an interactive Streamlit dashboard.
 
 <!--more-->
