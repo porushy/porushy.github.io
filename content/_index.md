@@ -46,6 +46,7 @@ sections:
         - Natural Language Processing
         - Quantitative Finance
         - Statistical Modelling & Simulation
+        - Business System Analyst
     design:
       columns: '1'
 
