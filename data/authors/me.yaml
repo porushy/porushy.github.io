@@ -63,29 +63,39 @@ education:
       CGPA: 9.8/10
 
 experience:
-  - role: Image Recognition — Machine Learning
-    org: Axis Bank Limited
+  - role: 'IT: Business System Analyst'
+    org: Axis Bank Limited · Corporate Office, Mumbai
     start: 2021-08-01
     end: 2021-11-30
     summary: |
-      - Managed an image-recognition system using neural networks to automate document classification and data extraction.
-      - Evaluated system performance on diverse bank documents to identify and troubleshoot technical anomalies.
-      - Collaborated with cross-functional teams to enhance data extraction processes, improving operational efficiency.
+      - **Document AI & OCR Pipeline Validation:** Spearheaded the validation and User Acceptance Testing (UAT) of an enterprise OCR and image-recognition system designed to automate customer onboarding and KYC workflows.
+      - **Multi-Class Document Classification:** Evaluated model accuracy for automated classification of identity documents (PAN Card, Aadhaar Card, Driving License) and structured/semi-structured customer application forms.
+      - **Field-Level Entity Extraction:** Audited extraction accuracy across handwritten and printed form fields to ensure high-precision capture of customer metadata into core banking workflows.
+      - **Root-Cause Analysis (RCA) & Edge-Case Debugging:** Investigated failing document payloads and extraction anomalies—isolating failure modes such as low-DPI scans, skew/orientation distortions, lighting artifacts, and non-standard document layouts.
+      - **Pre-Processing & Vendor Coordination:** Resolved system bottlenecks by implementing document pre-processing corrections and translating failure patterns into actionable model-retraining requirements for the external AI vendor.
     tags:
-      - Convolutional Neural Networks
-      - Image Recognition
+      - Optical Character Recognition (OCR)
+      - Computer Vision
+      - Document AI
+      - Root Cause Analysis
+      - Business Systems Analysis
+      - User Acceptance Testing (UAT)
   - role: Intern
-    org: Samsung R&D Institute India
+    org: Samsung R&D Institute India · Bangalore
     start: 2020-05-01
     end: 2020-07-31
     summary: |
-      - Conducted in-depth studies on various IQ data compression techniques to minimise EVM values in uplink and downlink.
-      - Explored advanced methods including LPC-based fronthaul compression, vector quantization, bit vector compression, IQ bit width reduction, linear prediction coding, and block floating point compression.
-      - Evaluated compression techniques using mathematical models and the input data properties of IQ data to ensure optimal performance.
+      - **6G Physical-Layer Signal Compression Research:** Conducted comprehensive literature and algorithmic research on frontier data compression techniques for next-generation 6G wireless communication systems.
+      - **Mathematical Compression Benchmarking:** Analyzed and compared Vector Quantization (VQ), bit-vector compression, and Linear Predictive Coding (LPC) on raw In-phase and Quadrature (IQ) baseband signal distributions.
+      - **Signal Integrity & EVM Optimization:** Evaluated the trade-off between compression ratios and signal distortion, focusing on minimizing Error Vector Magnitude (EVM) degradation across high-throughput uplink and downlink channels.
+      - **ML-Driven Adaptive Compression Feasibility:** Investigated Machine Learning architectures for dynamic, channel-aware uplink/downlink signal compression, identifying opportunities where learned representations outperform classical fixed-rate quantizers.
     tags:
       - Signal Processing
+      - Machine Learning
       - Data Compression
-      - Vector Quantization
+      - Wireless Communications (6G)
+      - Quantitative Research
+      - Statistical Modeling
   - role: Machine Learning Intern
     org: eJET Systems
     start: 2019-05-01
