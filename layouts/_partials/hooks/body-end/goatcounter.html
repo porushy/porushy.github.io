@@ -24,7 +24,9 @@
     line.hidden = true;
     footer.appendChild(line);
 
-    fetch('https://{{ $gc }}.goatcounter.com/counter/TOTAL.json')
+    // An explicit `start` is required: without it TOTAL.json returns 0.
+    // Tracking began 2026-11-08, so this covers every recorded visit.
+    fetch('https://{{ $gc }}.goatcounter.com/counter/TOTAL.json?start=2026-01-01')
       .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(function (data) {
         if (data == null || data.count == null) return;
