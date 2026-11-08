@@ -1,0 +1,36 @@
+{{/* GoatCounter: privacy-friendly visit counting + public total in the footer.
+
+     - The tracking script only loads on production builds, so `hugo server`
+       previews don't inflate the count.
+     - The footer line fetches the site-wide total from GoatCounter's public
+       counter endpoint (requires "Allow adding visitor counts on your website"
+       in GoatCounter settings). If the request fails, the line stays hidden.
+     - Visit https://porushy.github.io/#toggle-goatcounter to stop counting
+       your own visits in that browser. */}}
+{{ $gc := "porush" }}
+
+{{ if hugo.IsProduction }}
+<script data-goatcounter="https://{{ $gc }}.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+{{ end }}
+
+<script>
+  (function () {
+    var footer = document.querySelector('footer');
+    if (!footer) return;
+
+    var line = document.createElement('p');
+    line.className = 'powered-by text-center text-sm opacity-80 py-1';
+    line.hidden = true;
+    footer.appendChild(line);
+
+    fetch('https://{{ $gc }}.goatcounter.com/counter/TOTAL.json')
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (data) {
+        if (data == null || data.count == null) return;
+        line.textContent = '👁 ' + data.count + ' visits';
+        line.hidden = false;
+      })
+      .catch(function () { /* counter unavailable: keep hidden */ });
+  })();
+</script>
